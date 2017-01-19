@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade SolrBridge to newer
+ * versions in the future.
+ *
+ * @category    Sky
+ * @package     Sky_Core
+ * @author      Sky Team
+ * @copyright   Copyright (c) 2016-2017 Sky Team
+ */
+ -->
+<layout version="0.1.0">
+
+<!--
+Default layout, loads most of the pages
+-->
+
+
+       
+<checkout_onepage_index>
+    <reference name="checkout.onepage">
+        <action method="setTemplate"><template>skycore/onepage.phtml</template></action>
+    </reference>
+</checkout_onepage_index>  
+</layout>

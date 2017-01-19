@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/**
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade SolrBridge to newer
+ * versions in the future.
+ *
+ * @category    Sky
+ * @package     Sky_Core
+ * @author      Sky Team
+ * @copyright   Copyright (c) 2016-2017 Sky Team
+ */
+ -->
+<config>
+	<modules>
+		<Sky_Core>
+			<version>1.0.0</version>
+		</Sky_Core>
+	</modules>
+	<global>
+		<models>
+            <skycore>
+                <class>Sky_Core_Model</class>
+                <resourceModel>skycore_resource</resourceModel>
+            </skycore>
+        </models>
+		<helpers>
+			<skycore>
+				<class>Sky_Core_Helper</class>
+			</skycore>
+		</helpers>
+		<blocks>
+			<skycore>
+				<class>Sky_Core_Block</class>
+			</skycore>
+		<checkout>
+			<rewrite>
+				<onepage>Sky_Core_Block_Onepage</onepage>
+			</rewrite>
+		</checkout>
+		</blocks>
+	</global>
+	<frontend>
+		<routers>
+			<skycore>
+				<use>standard</use>
+				<args>
+					<module>Sky_Core</module>
+					<frontName>skycore</frontName>
+				</args>
+			</skycore>
+			  <checkout>
+                <args>
+                    <modules>
+                        <skycore before="Mage_Checkout_OnepageController">Sky_Core_Checkout</skycore>
+                    </modules>
+                </args>
+            </checkout>
+		</routers>
+		<translate>
+			<modules>
+				<Sky_Core>
+					<files>
+						<default>Sky_Core.csv</default>
+					</files>
+				</Sky_Core>
+			</modules>
+		</translate>
+		<layout>
+			<updates>
+				<skycore>
+					<file>skycore.xml</file>
+				</skycore>
+			</updates>
+		</layout>
+	</frontend>
+	<admin>
+		<routers>
+			<shop_admin>
+				<use>admin</use>
+				<args>
+					<module>Sky_Core</module>
+					<frontName>skycore</frontName>
+				</args>
+			</shop_admin>
+		</routers>
+	</admin>
+	<adminhtml>
+		<layout>
+			<updates>
+				<skycore>
+					<file>skycore.xml</file>
+				</skycore>
+			</updates>
+		</layout>
+	</adminhtml> 
+</config>

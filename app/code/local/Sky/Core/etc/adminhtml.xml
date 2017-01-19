@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade SolrBridge to newer
+ * versions in the future.
+ *
+ * @category    Sky
+ * @package     Sky_Core
+ * @author      Sky Team
+ * @copyright   Copyright (c) 2016-2017 Sky Team
+ */
+ -->
+<config>
+<menu>
+	   <score module="skycore">
+			<title>Sky Core Management</title>
+			<sort_order>71</sort_order>
+		</score>
+	</menu> 
+   <acl>
+        <resources>
+            <all>
+                <title>Sky Core</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <score translate="title">
+                                        <title>Sky Core settings</title>
+                                        <sort_order>99</sort_order>
+                                    </score>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl> 
+</config>
